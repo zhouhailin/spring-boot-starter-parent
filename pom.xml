@@ -7,13 +7,13 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.17</version>
+        <version>3.1.5</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <groupId>link.thingscloud</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.7.17</version>
+    <version>3.1.5</version>
     <packaging>pom</packaging>
     
     <name>${project.artifactId}</name>
@@ -29,11 +29,11 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <java.version>1.8</java.version>
+        <java.version>17</java.version>
 
         <!-- Compiler settings properties -->
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
 
         <mybatis-plus.version>3.5.3.2</mybatis-plus.version>
         <fury.version>0.2.1</fury.version>
@@ -44,7 +44,7 @@
         <url>https://github.com/zhouhailin/spring-boot-starter-parent</url>
         <connection>scm:git:https://github.com/zhouhailin/spring-boot-starter-parent.git</connection>
         <developerConnection>scm:git:https://github.com/zhouhailin/spring-boot-starter-parent.git</developerConnection>
-        <tag>2.7.17</tag>
+        <tag>3.1.5</tag>
     </scm>
     <licenses>
         <license>
@@ -69,7 +69,6 @@
                 <artifactId>jasypt-spring-boot-starter</artifactId>
                 <version>3.0.5</version>
             </dependency>
-
 
             <!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus-boot-starter -->
             <dependency>
@@ -222,24 +221,11 @@
                             </execution>
                         </executions>
                     </plugin>
-                    <!-- 测试覆盖度 -->
-                    <plugin>
-                        <groupId>org.codehaus.mojo</groupId>
-                        <artifactId>cobertura-maven-plugin</artifactId>
-                        <version>2.7</version>
-                        <configuration>
-                            <formats>
-                                <format>html</format>
-                                <format>xml</format>
-                            </formats>
-                            <check />
-                        </configuration>
-                    </plugin>
                     <!-- Gpg Signature -->
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
-                        <version>1.6</version>
+                        <version>3.1.0</version>
                         <executions>
                             <execution>
                                 <id>sonatype-release</id>
@@ -253,7 +239,7 @@
                     <plugin>
                         <groupId>org.sonatype.plugins</groupId>
                         <artifactId>nexus-staging-maven-plugin</artifactId>
-                        <version>1.6.8</version>
+                        <version>1.6.13</version>
                         <extensions>true</extensions>
                         <configuration>
                             <serverId>sonatype-release</serverId>
